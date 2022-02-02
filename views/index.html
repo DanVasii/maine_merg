@@ -1,0 +1,236 @@
+<html>
+    <head>
+
+        <link rel = 'stylesheet' href ='/assets/css/index.css'>
+        <script src = '/assets/js/index.js'></script>
+        <script src="https://kit.fontawesome.com/27746bdcf7.js" crossorigin="anonymous"></script>
+
+    </head>
+        <body>
+            <!-- Start top menu -->
+            <div class = 'menu_container'>
+              
+                <div class = 'links'>
+                    <ul>
+                        <li><a href='/index'>
+                            <span class = 'v-line bottom'></span>
+                            <i class="fas fa-home"></i>          
+                               Acasă
+                            <span class = 'v-line top'></span>
+                        </a></li>
+                        <li><a href='/about'>
+                            <i class="fas fa-address-card"></i>      
+                          <span class = 'v-line bottom'></span>
+                            Despre noi
+                            <span class = 'v-line top'></span>
+
+                        </a></li>
+                        <li><a href='/about'>
+                            <i class="fas fa-phone-alt"></i>             
+                             <span class = 'v-line bottom'></span>
+                            Contact
+                            <span class = 'v-line top'></span>
+
+                        </a></li>
+                        <li><a href='/login'>
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span class = 'v-line bottom'></span>
+                            Autentificare
+                            <span class = 'v-line top'></span>
+
+                        </a></li>
+                        <li><a  class = 'active' href='/login'>
+                            <i class="fas fa-plus"></i>
+                            <span class = 'v-line bottom'></span>
+                            Înscrie-te
+                            <span class = 'v-line top'></span>
+
+                        </a></li>
+
+                    </ul>
+                    <button class = 'sandwich' onclick="open_menu()">
+                        <span></span>
+                        <span></span>
+                        <span ></span>
+                    </button>
+                </div>
+                <div class = 'logo'>
+                    <img src = '/assets/images/logo.png'/>
+                </div>
+            </div>
+
+            <!-- End top menu  -->
+
+            <!-- Start left menu (only phones) -->
+
+            <div class = 'left_menu'>
+                <ul>
+                    <li><a href='/index'>
+                        <span class = 'v-line bottom'></span>
+                        <i class="fas fa-home"></i>          
+                           Acasă
+                        <span class = 'v-line top'></span>
+                    </a></li>
+                    <li><a href='/about'>
+                        <i class="fas fa-address-card"></i>      
+                      <span class = 'v-line bottom'></span>
+                        Despre noi
+                        <span class = 'v-line top'></span>
+
+                    </a></li>
+                    <li><a href='/about'>
+                        <i class="fas fa-phone-alt"></i>             
+                         <span class = 'v-line bottom'></span>
+                        Contact
+                        <span class = 'v-line top'></span>
+
+                    </a></li>
+                    <li><a href='/login'>
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class = 'v-line bottom'></span>
+                        Autentificare
+                        <span class = 'v-line top'></span>
+
+                    </a></li>
+                    <li><a  class = 'active' href='/login'>
+                        <i class="fas fa-plus"></i>
+                        <span class = 'v-line bottom'></span>
+                        Înscrie-te
+                        <span class = 'v-line top'></span>
+
+                    </a></li>
+
+                </ul>
+            </div>
+
+            <!-- End left menu -->
+
+            <!-- Start the header nav  -->
+                <div class = 'container'>   
+                    <div class = 'custom_slider'>
+
+                        <div class = 'slider_tray'>
+                                <div class = 'slide winter1'>
+                                </div>
+                                <div class = 'slide summer1'>
+
+                                </div>
+                    </div>
+
+                    <div class = 'search_area'>
+                        
+
+                        <div class = 'search_container'>
+                            <div class = 'left_search'> 
+                                <label for ='sc_1'>Destinație</label><br>
+                                <input type = 'text' id = 'sc_1' class = 'custom_input' placeholder="Unde mergi maine?">
+                            </div>
+                            <div class = 'right_search'>
+                                <i class="fas fa-search-location"></i> Caută
+                            </div>
+
+                        </div>
+                        <div class = 'row' >
+
+                        <div class = 'filters'>
+                            <span class = 'filter-title'>Adulti</span>
+                            <div class = 'counter_container'>
+                                <i class ='fas fa-minus'></i>
+                                <input type = 'text' value = '0'>
+                                <i class ='fas fa-plus'></i>
+
+                            </div>
+                        </div>
+
+                        <div class = 'filters'>
+                            <span class = 'filter-title'>Copii</span>
+
+                            <div class = 'counter_container'>
+                                
+                                <i class ='fas fa-minus'></i>
+                                <input type = 'text' value = '0'>
+                                <i class ='fas fa-plus'></i>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class = 'row' >
+
+                        <div class = 'filters'>
+                            <span class = 'filter-title'>Check-in</span>
+                            
+                            <div class = 'date ch_in'>
+                                <input type = 'hidden' value = '' id = 'ch_in'>
+                                <span><i class="far fa-calendar"></i> Selecteaza o data</span>
+                            </div>
+
+                        </div>
+
+                        <div class = 'filters'>
+                            <span class = 'filter-title'>Check-out</span><br>
+                            
+                                <div class = 'date ch_out'>
+                                    <input type = 'hidden' value = '' id = 'ch_out'>
+                                    <span><i class="far fa-calendar"></i> Selecteaza o data</span>
+                                </div>
+                        </div>
+
+                    </div>
+
+
+
+                    </div>
+
+                    </div>
+                </div>
+            <!-- End header nav -->
+
+
+            <!-- Start calendar  -->
+                <div class = 'calendar_container'>
+                    <div class = 'calendar_header row'>
+                        <i class="fas fa-chevron-left"></i>
+
+                        <span class = 'month'>
+                            Ianuarie
+                        </span>
+
+                        <span class = 'month'>
+                            Februarie
+                        </span>
+
+                        <i class="fas fa-chevron-right"></i>
+
+                    </div>
+                    <div class = 'calendar_handlers'>
+                    <div class = 'ch_in_calendar'>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                    </div>
+                    <div class = 'v_line'>
+
+                    </div>
+                    <div class = 'ch_out_calendar'>
+
+                    </div>
+                </div>
+                </div>
+            <!-- End calendar -->
+        </body>
+</html>

@@ -1,0 +1,465 @@
+body{
+    margin: 0px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+/* Menu Start  */
+.menu_container
+{
+ height: 70px;
+ background-color: #8EC5FC;
+ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+ 
+ position: relative;
+ top: 0px;
+ left: 0px;   
+ width: 100%;
+ display: flex;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: start;
+}
+
+.links ul, .left_menu ul{
+    padding: 0px;
+    list-style-type: none;
+}
+
+.links ul li{
+    display: inline-block;;
+    /* background-color: blue; */
+    padding: 15px 10px 15px 10px;
+}
+
+.links ul li a,.left_menu ul li a{
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    position: relative;;
+    transition: background-color .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left_menu ul li a
+{
+    width: calc(100% - 16px);
+}
+
+.links ul li a i, .left_menu ul li a i{
+    color: white;
+    font-size: 20px;;
+    margin-right: 8px;
+    transition: color .4s;
+}
+.left_menu ul li a i
+{
+    position: absolute;
+    left: 70px;
+}
+.v-line
+{
+    position: absolute;
+    height: 3px;
+    background-color: rgb(255,140,0);
+}
+
+.v-line.bottom
+{
+    width: 0%;
+    bottom: 0px;
+    right: 0px;
+    transition: width .4s;
+
+}
+
+.v-line.top
+{
+    width: 0%;
+    top: 0px;
+    left: 0px;
+    transition: width .4s;
+}
+
+.links ul li a::before,.left_menu ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 0%;
+    background-color: rgb(255,140,0);
+    transition: height .4s;
+}
+
+.links ul li a::after, .left_menu ul li a::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 3px;
+    height: 0%;
+    background-color: rgb(255,140,0);
+    transition: height .4s;
+}
+
+.links ul li a:hover,.left_menu ul li a:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+.links ul li a:hover i,.left_menu ul li a:hover i{
+    color: black;
+}
+.links ul li a:hover::before,.left_menu ul li a:hover::before   {
+    height: 100%;
+}
+
+
+.links ul li a:hover::after, .left_menu ul li a:hover::after  {
+    height: 100%;
+}
+
+.links ul li a:hover .v-line, .left_menu ul li a:hover .v-line {
+    width: 100%;
+}
+
+.links ul li  a.active, .left_menu ul li a.active
+{
+    background-color: rgba(255,255,255,0.6);
+}
+
+.links ul li  a.active i, .left_menu ul li a.active i{
+    color: black;
+}
+.sandwich
+{
+    position: relative;
+    width: 40px;
+    height: 31px;
+    background-color: transparent;
+    margin: none;
+    padding: none;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+}
+.sandwich span
+{
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: transform .4s, opacity .2s;
+}
+
+.sandwich span:nth-child(1)
+{
+    top: 0px;
+}
+
+.sandwich span:nth-child(2)
+{
+    top: 13px;
+}
+
+.sandwich span:nth-child(3)
+{
+    bottom: 0px;
+}
+
+.left_menu
+{
+    width: 300px;
+    height: calc(100% - 70px);
+    position: fixed;
+    top: 70px;
+    left: -300px;
+
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-top: 2px solid white;
+
+    transition: left .4s;
+}
+
+.left_menu ul li{
+    padding: 15px 10px 15px 10px;
+    text-align: center;
+}
+
+.sandwich span.first_bar
+{
+    transform: rotate(45deg);
+}
+
+.sandwich span.second_bar
+{
+    transform: translate(0px, -13px) rotate(-45deg);
+}
+
+.sandwich span.hidden
+{
+    opacity: 0;
+}
+
+.cotainer 
+{
+    width: 100%;
+}
+
+.flex_d{
+    display: flex;
+    
+}
+
+
+/* slide shit, move from index */
+.custom_slider
+{
+    overflow: hidden;
+}
+.slide
+{
+    width: 2500px;
+    height: 450px;
+    background-size: 100% 450px;
+    z-index: -1;
+}
+.slider_tray
+{
+    display: flex;
+    width: fit-content;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: inset 0px 0px 49px 6px white;
+}
+.winter1
+{
+    background-image: url('/assets/images/winter-767172.jpg');
+    animation: test_anim 10s ease-in;
+
+}
+
+.summer1
+{
+    background-image: url('/assets/images/rumania-4413660_1920.jpg');
+}
+
+
+.search_area{
+    position: absolute;
+    z-index: 999;
+    left: 100px;
+    top: 100px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    left: calc((100% - 500px)/2);
+    top: calc((100% - 200px)/2);
+    border: 1px solid white;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    color: rgba(0,0,0,0.8);
+    padding: 0px 10px;
+    flex-direction: column;
+}
+
+.search_container
+{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    width: calc(100% - 30px);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.left_search label{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.custom_input{
+    padding: 10px 5px;
+    font-size: 18px;
+    border: 0px;
+    outline: 0px;
+    width: 100%;
+}
+
+.left_search{
+    flex: 7;
+}
+.right_search i 
+{
+    font-size: 20px;
+    margin-right: 5px;
+    
+}
+.right_search{
+    text-shadow: 0px 0px 3px black;
+    color: white;
+    font-size: 20px;
+    flex: 2;
+    text-align: center;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0px;
+    border-radius: 50px;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    cursor: pointer;
+}
+.row
+{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    grid-column-gap: 10px;
+}
+.row .filters{
+    flex: 1;
+    background-color: white;
+    
+    padding: 5px 0px;
+    border-radius: 10px;
+}
+
+.counter_container
+{
+    text-align: center;
+    user-select: none;
+}
+
+.row i{
+    padding: 10px;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 2px black;
+}
+
+.filters input{
+    width: 50px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.filters .filter-title{
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.date
+{
+    text-align: center;
+}
+
+/* Calendar */
+
+.calendar_container
+{
+    display: grid;
+    position: absolute;
+    top: 100px;
+    left: 350px;
+    width: 500px;
+    height: 300px;
+    z-index: 999;
+    border-radius: 20px;
+    background-color: #eee;
+    grid-template-rows: auto 1fr 10px;
+}
+
+
+.calendar_header
+{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    padding: 10px 0px;
+    font-size: 17px;
+    align-items: center;
+    
+}
+
+.calendar_handlers
+{
+    display: grid;
+    grid-template-rows: 1fr;;
+    grid-template-columns: auto auto;
+}
+
+.ch_out_calendar
+{
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    height: max-content;
+    grid-row-gap: 10px;
+}
+.ch_in_calendar
+{   
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    height: max-content;
+    grid-row-gap: 10px;
+    
+}
+.ch_in_calendar span
+{   
+    text-align: center;
+}
+.v_line
+{
+    height: 100%;
+    width: 2px ;
+    background-color: black;
+}
+.calendar_header i{
+    cursor: pointer;
+    
+}
+@keyframes test_anim{
+    from{
+        background-position-x: 0px;
+        opacity: 1
+        ;
+    }
+    to{
+        background-position-x: -500px;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .links ul{
+        display: none;
+    }
+
+    .links .sandwich{
+        display: block;
+    }
+}
